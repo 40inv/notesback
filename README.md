@@ -12,7 +12,7 @@
 1. Start pgAdmin and IntelliJ IDEA.  
 2. Open pgAdmin and create new database.
 3. Open project in your IntelliJ IDEA.
-4. Check application-dev.properties in /src/main/resources and check login, password, port, database name. If you have others, change them to yours.  
+4. Go to application-dev.properties in /src/main/resources and check login, password, port, database name. If you have others, change them to yours.  
 5. Now open "Edit Run/Debug configurations" dialog. Add new Maven configuration and write to field command line: "spring-boot:run". Click Apply then Ok.
 6. Now project is ready to start.  
 
