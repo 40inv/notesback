@@ -81,9 +81,11 @@ public class NoteController {
     }
 
     @GetMapping(path = "")
-    public ResponseEntity<Collection<Note>> getAllNotes(@RequestHeader HttpHeaders headers) {
+    public ResponseEntity<Collection<NoteDto>> getAllNotes(@RequestHeader HttpHeaders headers) {
         logHeaders(headers);
-        return ResponseEntity.ok(repository.findAll());
+        return ResponseEntity.ok(repository.findAll()
+                .stream().map(element -> new NoteDto(element))
+                .collect(Collectors.toList()));
     }
 
     @GetMapping("/{noteId}")
