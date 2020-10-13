@@ -28,7 +28,7 @@ public class NoteHistoryController {
     }
 
     @GetMapping(path = "/{noteId}")
-    public ResponseEntity<List> updateCompany(@RequestHeader HttpHeaders headers,
+    public ResponseEntity<List> getNoteHistory(@RequestHeader HttpHeaders headers,
                                               @PathVariable Long noteId,
                                               @RequestBody Note updatedCompany) {
         List result = noteHistoryService.getFullHistoryById(noteId);
